@@ -5,7 +5,9 @@ var router = express.Router();
  * Load main page
  */
 router.get('/dashboard', (req, res)=>{
-    res.render('admin/dash')
+    res.render('admin/dash', {
+        title: "Main Dashboard page"
+    })
 })
 
 /**
