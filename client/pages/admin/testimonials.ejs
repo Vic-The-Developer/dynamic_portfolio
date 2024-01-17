@@ -1,6 +1,48 @@
 <%- include('./_layouts/header') %>
 
+<div class="content-wrap nb-visible" data-effect="nb-push">
+    <!-- Display error messages -->
+    <% if (successMessage.length > 0) { %>
+        <% successMessage.forEach((data)=>{ %>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert" style="width: 98%; margin: auto; margin-bottom: 10px;">
+                <strong>Hello!</strong> <%= data %>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <% }) %>
+    <% } %>
 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card" style="border-left: 2px solid rgb(0, 132, 255);">
+                    <div class="card-body card-body2">
+                        <div class="cIcon">
+                            <a href="#" data-toggle="modal" data-target="#add"><i class="fa fa-plus"
+                                    style="color: rgb(0, 132, 255);"></i></a>
+                        </div>
+                        <h4 class="cHead">Add Testimonial</h4>
+                        <div class="cNumber" style="color: rgb(194, 194, 194);"><i>click to add</i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="border-left: 2px solid goldenrod">
+                    <div class="card-body card-body2">
+                        <div class="cIcon"><i class="fa fa-video-camera" style="color: goldenrod"></i></div>
+                        <h4 class="cHead">Total Testimonials</h4>
+                        <div class="cNumber">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="width: 100%; margin-top: 40px;">
+
+        </div>
+    </div>
+</div>
 
 
 <%- include('./_layouts/footer') %>
