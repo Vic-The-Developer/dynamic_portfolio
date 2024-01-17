@@ -1,0 +1,11 @@
+{
+  "name": "digital_portfolio",
+  "version": "1.0.0",
+  "description": "Dynamic digital portfolio",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
