@@ -26,7 +26,7 @@ app.use(cors(corsOptions));
 
 
 // View engine setup
-app.set('views', path.join(__dirname,'/client/pages'));
+app.set('views', path.join(__dirname,'../client/pages'));
 app.set('view engine', 'ejs');
 
 // Connect to db
@@ -57,7 +57,7 @@ app.use(flash());
 
 
 // Set public folder
-app.use('/', express.static('assets/'));
+app.use('/', express.static('../client/assets/'));
 
 
 //Set routes
@@ -65,6 +65,11 @@ const dymamicPages = require('./routes/main');
 
 app.use('/portolio', dymamicPages);
 
+
+//render the client side page
+app.get('/', (req, res)=>{
+    res.render('index')
+})
 
 
 //Handle error 404
