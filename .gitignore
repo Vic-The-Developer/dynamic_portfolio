@@ -1,10 +1,5 @@
 # dependencies
-/node_modules
-# /public/images/apartments
-# /public/images/services
-# /public/images/lands
-# /public/images/users
-# /public/images/employees
+/server/node_modules
 /.pnp
 .pnp.js
 
