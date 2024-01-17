@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: gainsboro;
 }
 
 /*Navigation bar styles*/
@@ -17,6 +18,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 20px;
 }
 header h1 {
     margin: 0;
@@ -44,12 +50,38 @@ nav a:hover {
 
 /*Section styles*/
 section {
-    background-color: #f4f4f4;
-    padding: 20px;
+    padding: 2px 20px;
+    margin-top: 20px;
 }
 
 /*About Me*/
+#about h2{
+    text-align: center;
+}
+#about h2 span{
+    color: crimson;
+}
+#about .container1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+#about img{
+    width: 100%;
+}
+.item {
+    width: 100%
+}
+.container1 > div {
+    flex: 45%;
+    margin-bottom: 10px;
+}
 
 
+/*Skills section*/
+#skills h2{
+    text-align: center;
+}
 
 
