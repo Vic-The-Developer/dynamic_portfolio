@@ -63,7 +63,7 @@ app.use('/', express.static('../client/assets/'));
 //Set routes
 const dymamicPages = require('./routes/main');
 
-app.use('/portolio', dymamicPages);
+app.use('/admin', dymamicPages);
 
 
 //render the client side page
