@@ -2,9 +2,6 @@ var LocalStrategy = require('passport-local').Strategy;
 var User = require('../models/user');
 var bcrypt = require('bcrypt');
 
-const clientID = "250874539293-oqrkfee88vi9o0hfd95eiput6veuoonp.apps.googleusercontent.com";
-const clientSecret = "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";
-
 module.exports = function (passport) {
 
     passport.use('local',new LocalStrategy({

@@ -27,6 +27,7 @@ header{
 header h1 {
     margin: 0;
     flex: 1;
+    margin-bottom: 17px;
 }
 nav{
     display: flex;
@@ -39,6 +40,7 @@ nav a{
     margin: 0 5px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    font-size: 17px;
 }
 nav a.active{
     color: rgb(255, 46, 88);
@@ -46,6 +48,7 @@ nav a.active{
 nav a:hover {
     background-color: white;
     color: rgb(255, 46, 88);
+    text-decoration: none;
 }
 
 /*Section styles*/
@@ -57,11 +60,12 @@ section {
 /*About Me*/
 #about h2{
     text-align: center;
+    margin-bottom: 30px;
 }
 #about h2 span{
     color: crimson;
 }
-#about .container1{
+.container1{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -80,8 +84,74 @@ section {
 
 
 /*Skills section*/
+#skills{
+    margin-top: 50px;
+}
 #skills h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+#skills-container{
+    padding-top: 20px;
+}
+.progressOther{
+    width: 70%;
+    margin-top: 20px;
+}
+
+
+/*Projects section*/
+#projects{
+    margin-top: 50px;
+}
+#projects h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#projects-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    padding-top: 20px;
+}
+#projects-container .card{
+    width: 30%;
+}
+
+
+/*Experience Section*/
+#experience{
+    margin-top: 50px;
+}
+#experience h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#experience-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    padding-top: 20px;
+}
+#experience .toast{
+    width: 30%;
+}
+
+
+/*Contact Section*/
+#contact{
+    margin-top: 50px;
+}
+#contact h2{
     text-align: center;
 }
 
 
+/*Footer section*/
+footer{
+    background-color: #120446;
+    color: white;
+    margin-top: 80px;
+}

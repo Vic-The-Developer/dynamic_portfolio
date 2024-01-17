@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Dynamic Portfolio</title>
     <link rel="stylesheet" href="css/main.css">
+
+    <!--Bootstrap Styles Links-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--End of Bootstrap Styles Links-->
 </head>
 <body>
 
@@ -24,12 +31,15 @@
     <!-- About Me Section -->
     <section id="about">
         <h2>I am a <span>Web Developer</span></h2>
-        <div class="container1">
+        <div class="container1" style="width: 85%; margin: auto;">
             <div class="item">
-                <img src="images/me.jpeg" alt="My Image">
+                <h3>Firstname Lastname</h3>
+                <p>Career</p>
+                <p>Write a brief introduction about yourself here.</p>
+                <button class="btn btn-success">Hire Me</button>
             </div>
             <div class="item">
-                <p>Write a brief introduction about yourself here.</p>
+                <img src="images/me.jpeg" alt="My Image">
             </div>
         </div>
     </section>
@@ -37,8 +47,46 @@
     <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
-        <div id="skills-container">
-            <!-- Skills will be dynamically added here using JavaScript -->
+        <div class="progress item">
+            <div class="progress-bar bg-success" role="progressbar" style="width:40%">
+              Free Space
+            </div>
+            <div class="progress-bar bg-warning" role="progressbar" style="width:10%">
+              Warning
+            </div>
+            <div class="progress-bar bg-danger" role="progressbar" style="width:20%">
+              Danger
+            </div>
+        </div>
+        <div id="skills-container" class="container1">
+            <div class="item">
+                <img src="images/me.jpeg" style="width: 100%;" alt="Skills Image">
+            </div>
+            <div class="item">
+                <div class="skillsText">
+                    Here shall be a short description of the skills i possess.
+                </div>
+                <div class="progress progressOther">
+                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                      40% Complete (success)
+                    </div>
+                </div>
+                <div class="progress progressOther">
+                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                      50% Complete (info)
+                    </div>
+                </div>
+                <div class="progress progressOther">
+                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                      60% Complete (warning)
+                    </div>
+                </div>
+                <div class="progress progressOther">
+                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                      70% Complete (danger)
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -46,21 +94,70 @@
     <section id="projects">
         <h2>Projects</h2>
         <div id="projects-container">
-            <!-- Projects will be dynamically added here using JavaScript -->
+            <div class="card" >
+                <img class="card-img-top" src="images/me.jpeg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Project Title</h4>
+                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                  <a href="#" class="btn btn-primary stretched-link">Visit Project</a>
+                </div>
+            </div>
+            <div class="card" >
+                <img class="card-img-top" src="images/me.jpeg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Project Title</h4>
+                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                  <a href="#" class="btn btn-primary stretched-link">Visit Project</a>
+                </div>
+            </div>
+            <div class="card" >
+                <img class="card-img-top" src="images/me.jpeg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Project Title</h4>
+                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                  <a href="#" class="btn btn-primary stretched-link">Visit Project</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience">
-        <h2>Experience</h2>
+        <h2>Work Experience</h2>
         <div id="experience-container">
-            <!-- Work experience will be dynamically added here using JavaScript -->
+            <div class="toast" data-autohide="false">
+                <div class="toast-header">
+                  <strong class="mr-auto text-primary">Toast Header</strong>
+                  <small class="text-muted">5 mins ago</small>
+                </div>
+                <div class="toast-body">
+                  Some text inside the toast body
+                </div>
+            </div>
+            <div class="toast" data-autohide="false">
+                <div class="toast-header">
+                  <strong class="mr-auto text-primary">Toast Header</strong>
+                  <small class="text-muted">5 mins ago</small>
+                </div>
+                <div class="toast-body">
+                  Some text inside the toast body
+                </div>
+            </div>
+            <div class="toast" data-autohide="false">
+                <div class="toast-header">
+                  <strong class="mr-auto text-primary">Toast Header</strong>
+                  <small class="text-muted">5 mins ago</small>
+                </div>
+                <div class="toast-body">
+                  Some text inside the toast body
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact</h2>
+        <h2>Contact Me</h2>
         <p>Email: your.email@example.com</p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/yourname/" target="_blank">Your LinkedIn Profile</a></p>
     </section>
@@ -72,6 +169,11 @@
 
     <!-- JavaScript for making API calls and updating content -->
     <script src="your-portfolio-script.js"></script>
+    <script>
+        $(document).ready(function(){
+          $('.toast').toast('show');
+        });
+    </script>
 
 </body>
 </html>
