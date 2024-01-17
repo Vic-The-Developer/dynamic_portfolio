@@ -48,10 +48,54 @@
         </div>
 
         <div class="row" style="width: 100%; margin-top: 40px;">
-
+            <div class="tChart">
+                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                <div class="card" style="width: 20rem; height: 90%; background: #2d6980; color: white; text-align: center; display: flex; justify-content: center; align-items: center;">
+                    <div class="card-body card-body3">
+                        <h5 class="card-title">User Information</h5>
+                        <p class="card-text">
+                            <ul style="list-style-type: none; text-align: left;">
+                                <li>Full name: name</li>
+                                <li>Email: example@gmail.com</li>
+                                <li>Location: loc</li>
+                                <li>LinkedIn: <a href="#">address</a></li>
+                            </ul>
+                        </p>
+                        <a href="/admin/user_info" class="btn btn-primary">Go to page</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<script>
+    var xValues = ["HTML", "CSS", "JAVASCRIPT", "MYSQL", "GRAPHICS DESIGN"];
+    var yValues = [55, 49, 44, 24, 15];
+    var barColors = [
+    "#b91d47",
+    "#00aba9",
+    "#2b5797",
+    "#e8c3b9",
+    "#1e7145"
+    ];
+
+    new Chart("myChart", {
+    type: "pie",
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+    },
+    options: {
+        title: {
+        display: true,
+        text: "Skillset"
+        }
+    }
+    });
+</script>
 
 
 <%- include('./_layouts/footer') %>
