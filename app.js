@@ -26,7 +26,7 @@ app.use(cors(corsOptions));
 
 
 // View engine setup
-app.set('views', path.join(__dirname,'../client/pages'));
+app.set('views', path.join(__dirname,'/client/pages'));
 app.set('view engine', 'ejs');
 
 // Connect to db
