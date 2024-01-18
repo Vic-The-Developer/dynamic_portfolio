@@ -51,18 +51,15 @@ router.post('/add_skill', async (req, res)=>{
         // Check if the user with the given userId exists
         const user = await User.find({email: email});
 
+        console.log(user)
+
         if (!user) {
             return res.status(404).json({ error: 'User not found' });
         }
 
-        // Add the new skill to the user's skills array
-        user.skills.push({
-            skillname,
-            percentage,
-        });
+        //update
+        await User.findOneAndUpdate({email: email}, { $push: { skills: { skillname, percentage } } });
 
-        // Save the updated user to the database
-        await user.save();
 
         // Respond with a success message or any additional information you want to send
         req.flash('success', 'skill added')
