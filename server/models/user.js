@@ -17,8 +17,7 @@ var userSchema = mongoose.Schema({
         required: true
     },
     fullName: {
-        type: String,
-        required: true
+        type: String
     },
     skills: {
         type: [{

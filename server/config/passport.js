@@ -5,12 +5,12 @@ var bcrypt = require('bcrypt');
 module.exports = function (passport) {
 
     passport.use('local',new LocalStrategy({
-        usernameField : 'email',
+        usernameField : 'username',
         passwordField : 'password',
         passReqToCallback : true 
         }, function (req, username, password, done) {
 
-        User.findOne({email: username}, function (err, user) {
+        User.findOne({username: username}, function (err, user) {
             if (err)
                 console.log(err);
 

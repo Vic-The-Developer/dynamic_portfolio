@@ -388,6 +388,8 @@ router.post('/signup', async (req, res)=>{
     const email = req.body.email;
     const password = req.body.password;
 
+    console.log(username, email, password)
+
     // Validate input
     if (!username || !email || !password) {
         req.flash('success', 'All fields are required')
@@ -398,7 +400,7 @@ router.post('/signup', async (req, res)=>{
         // Check if the user with the given email already exists
         const existingUser = await User.findOne({ email });
         if (existingUser) {
-            req.flash('success', 'Email already in use!')
+            req.flash('success', 'Email already in use!');
             res.redirect('/admin/signup')
         }
 
@@ -429,11 +431,11 @@ router.post('/signup', async (req, res)=>{
 router.get('/login', (req, res)=>{
     res.render('login')
 })
-router.post('/login', (req, res)=>{
+router.post('/login', (req, res, next)=>{
     // If validation passes, proceed to authentication
     passport.authenticate('local', {
-        successRedirect: '/user/account',
-        failureRedirect: '/user/login',
+        successRedirect: '/admin/dashboard',
+        failureRedirect: '/admin/login',
         failureFlash: true,
     })(req, res, next);
 })
@@ -442,7 +444,7 @@ router.get('/logout', function(req, res, next) {
       if (err) { return next(err); }
 
       req.flash('success', 'You are logged out!');
-      res.redirect('/user/login');
+      res.redirect('/admin/login');
     });
 });
 
