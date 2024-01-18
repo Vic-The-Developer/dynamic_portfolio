@@ -57,7 +57,7 @@ app.use(flash());
 
 
 // Set public folder
-app.use('/', express.static('../client/assets/'));
+app.use('/', express.static('/client/assets/'));
 
 
 //Set routes
