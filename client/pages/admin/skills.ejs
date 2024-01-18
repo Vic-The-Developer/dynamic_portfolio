@@ -19,7 +19,7 @@
                 <div class="card" style="border-left: 2px solid rgb(0, 132, 255);">
                     <div class="card-body card-body2">
                         <div class="cIcon">
-                            <a href="#" data-toggle="modal" data-target="#add"><i class="fa fa-plus"
+                            <a href="#" data-toggle="modal" data-target=".add"><i class="fa fa-plus"
                                     style="color: rgb(0, 132, 255);"></i></a>
                         </div>
                         <h4 class="cHead">Add Skills</h4>
@@ -57,8 +57,8 @@
                         <td>HTML</td>
                         <td>89%</td>
                         <td>2000-10-31T01:30:00.000-05:00</td>
-                        <td><a href="#">Update</a></td>
-                        <td><a href="#">Delete</a></td>
+                        <td><a href="#" data-toggle="modal" data-target=".update">Update</a></td>
+                        <td><a href="#" data-toggle="modal" data-target=".delete">Delete</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -66,5 +66,103 @@
     </div>
 </div>
 
+
+<!--Modals-->
+<div class="modal fade add" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Skills</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="/admin/add_skill" method="post" enctype="application/x-www-form-urlencoded">
+                <div class="form-group">
+                  <label for="skillname">Skill Type:</label>
+                  <input type="text" class="form-control" name="skillname" id="skillname" placeholder="Enter Skillname" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email" required>
+                </div>
+                <div class="form-group">
+                  <label for="percentage">Percentage:</label>
+                  <input type="type" class="form-control" name="percentage" id="percentage" placeholder="Enter percentage" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-login">Add Skill</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Update-->
+<div class="modal fade update" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Update Skills</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="/admin/update_skill" method="post" enctype="application/x-www-form-urlencoded">
+                <div class="form-group">
+                    <label for="skillname">Skill Type:</label>
+                    <input type="text" class="form-control" name="skillname" id="skillname" placeholder="Enter skillname" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="percentage">Percentage:</label>
+                    <input type="type" class="form-control" name="percentage" id="percentage" placeholder="Enter percentage" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-login">Update Skill</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--Delete-->
+<div class="modal fade delete" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Delete Skill</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="/admin/delete_skill" method="post" enctype="application/x-www-form-urlencoded">
+                <div class="form-group">
+                  <label for="skillname">Skill Type:</label>
+                  <input type="text" class="form-control" name="skillname" id="skillname" placeholder="Enter skillname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-login">Delete Skill</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
 
 <%- include('./_layouts/footer') %>

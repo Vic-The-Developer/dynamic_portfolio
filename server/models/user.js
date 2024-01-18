@@ -22,7 +22,7 @@ var userSchema = mongoose.Schema({
     skills: {
         type: [{
             skillname: String,
-            percentage: Number
+            percentage: String
         }]
     },
     projects: {

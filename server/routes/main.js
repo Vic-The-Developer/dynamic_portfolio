@@ -12,6 +12,8 @@ const User = require('../models/user')
  */
 router.get('/dashboard', (req, res)=>{
 
+    if (req.user == undefined != 0) res.redirect('/admin/login');
+
     const successMessage = req.flash('success');
 
     res.render('admin/dash', {
@@ -25,6 +27,10 @@ router.get('/dashboard', (req, res)=>{
  */
 router.get('/skills', (req, res)=>{
 
+    if (req.user === undefined) {
+        return res.redirect('/admin/login');
+    }
+
     const successMessage = req.flash('success');
 
     res.render('admin/skills', {
@@ -34,6 +40,11 @@ router.get('/skills', (req, res)=>{
 })
 
 router.post('/add_skill', async (req, res)=>{
+
+    if (req.user === undefined) {
+        return res.redirect('/admin/login');
+    }
+
     const { email, skillname, percentage } = req.body;
 
     try {
@@ -64,6 +75,11 @@ router.post('/add_skill', async (req, res)=>{
 })
 
 router.post('/update_skill', async (req, res)=>{
+
+    if (req.user === undefined) {
+        return res.redirect('/admin/login');
+    }
+
     const { email, skillname, percentage } = req.body;
 
     try {
@@ -100,6 +116,11 @@ router.post('/update_skill', async (req, res)=>{
 })
 
 router.post('/delete_skill', async (req, res)=>{
+
+    if (req.user === undefined) {
+        return res.redirect('/admin/login');
+    }
+
     const { email, skillname } = req.body;
 
     try {
@@ -137,6 +158,10 @@ router.post('/delete_skill', async (req, res)=>{
  */
 router.get('/projects', (req, res)=>{
 
+    if (req.user === undefined) {
+        return res.redirect('/admin/login');
+    }
+
     const successMessage = req.flash('success');
 
     res.render('admin/projects', {
@@ -146,6 +171,11 @@ router.get('/projects', (req, res)=>{
 })
 
 router.post('/add_project', async (req, res) => {
+
+    if (req.user === undefined) {
+        return res.redirect('/admin/login');
+    }
+
     const { email, projectname, imageurl, description, projecturl } = req.body;
 
     try {
@@ -176,6 +206,11 @@ router.post('/add_project', async (req, res) => {
 });
 
 router.post('/update_project', async (req, res) => {
+
+    if (req.user === undefined) {
+        return res.redirect('/admin/login');
+    }
+
     const { email, projectName, updatedProject } = req.body;
 
     try {
@@ -211,6 +246,11 @@ router.post('/update_project', async (req, res) => {
 });
 
 router.post('/delete_project', async (req, res) => {
+
+    if (req.user === undefined) {
+        return res.redirect('/admin/login');
+    }
+
     const { email, projectName } = req.body;
 
     try {
@@ -248,6 +288,10 @@ router.post('/delete_project', async (req, res) => {
  */
 router.get('/user_info', (req, res)=>{
 
+    if (req.user === undefined) {
+        return res.redirect('/admin/login');
+    }
+
     const successMessage = req.flash('success');
 
     res.render('admin/userInfo', {
@@ -257,6 +301,11 @@ router.get('/user_info', (req, res)=>{
 })
 
 router.post('/add_user_info', async (req, res) => {
+
+    if (req.user === undefined) {
+        return res.redirect('/admin/login');
+    }
+
     const { email, name, age, additionalInfo } = req.body;
 
     try {
@@ -284,6 +333,11 @@ router.post('/add_user_info', async (req, res) => {
 });
 
 router.post('/update_user_info', async (req, res) => {
+
+    if (req.user === undefined) {
+        return res.redirect('/admin/login');
+    }
+
     const { email, updatedUserInfo } = req.body;
 
     try {
@@ -319,6 +373,11 @@ router.post('/update_user_info', async (req, res) => {
 });
 
 router.post('/delete_user_info', async (req, res) => {
+
+    if (req.user === undefined) {
+        return res.redirect('/admin/login');
+    }
+
     const { email, infoToDelete } = req.body;
 
     try {
@@ -355,6 +414,10 @@ router.post('/delete_user_info', async (req, res) => {
  * Load Testimonial Page
  */
 router.get('/testimonials', (req, res)=>{
+
+    if (req.user === undefined) {
+        return res.redirect('/admin/login');
+    }
 
     const successMessage = req.flash('success');
 
